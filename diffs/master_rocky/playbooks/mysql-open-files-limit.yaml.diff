@@ -1,0 +1,16 @@
+--- ./tv-master-mysql-open-files-limit.yaml	2019-06-03 11:22:38.741481703 +0200
++++ ./rocky-mysql-open-files-limit.yaml	2019-06-03 11:22:38.742481710 +0200
+@@ -1,12 +1,12 @@
+ ---
+-- hosts: Controller, Database
++- hosts: Controller
+   vars:
+     metadata:
+       name: MySQL Open Files Limit
+       description: >
+         Verify the `open-files-limit` configuration is high enough
+ 
+         https://access.redhat.com/solutions/1598733
+       groups:
+         - post-deployment
+     min_open_files_limit: 16384

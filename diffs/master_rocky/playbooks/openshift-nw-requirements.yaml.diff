@@ -1,0 +1,14 @@
+--- ./tv-master-openshift-nw-requirements.yaml	2019-06-03 11:22:38.748481754 +0200
++++ ./rocky-openshift-nw-requirements.yaml	2019-06-03 11:22:38.749481761 +0200
+@@ -1,10 +1,11 @@
+ ---
+ - hosts: undercloud
+   vars:
+     metadata:
+       name: Check network requirements for an OpenShift on OpenStack deployment
+       description: |
+         Checks if an external network has been configured on the overcloud as
+         required for an OpenShift deployment on top of OpenStack.
+       groups:
+       - openshift-on-openstack
++

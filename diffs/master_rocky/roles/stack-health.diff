@@ -1,0 +1,13 @@
+--- ./tv-master/roles/stack-health/tasks/main.yml	2019-06-03 11:14:34.694966005 +0200
++++ ./rocky-stack-health	2019-06-03 11:22:39.140484607 +0200
+@@ -1,9 +1,7 @@
+ ---
+ - name: Check stack resource statuses
+   assert:
+     that:
+       - "'_COMPLETE' in item.resource_status"
+-    msg: >-
+-      "Health check failed for resource {{ item.resource_name }}
+-      with status: {{ item.resource_status }}"
++    msg: "Health check failed for resource {{ item.resource_name }} with status: {{ item.resource_status }}"
+   with_items: "{{ lookup('stack_resources', wantlist=True) }}"

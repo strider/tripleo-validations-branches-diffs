@@ -1,0 +1,37 @@
+--- ./tv-master/roles/undercloud-tokenflush/tasks/main.yml	2019-06-03 11:14:34.697966027 +0200
++++ ./stein-undercloud-tokenflush	2019-06-03 11:22:39.266485524 +0200
+@@ -1,29 +1,13 @@
+ ---
+-- name: Get the path of tripleo undercloud config file
+-  become: true
+-  hiera: name="tripleo_undercloud_conf_file"
+-
+-- name: Get the Container CLI from the undercloud.conf file
+-  become: true
+-  ini:
+-    path: "{{ tripleo_undercloud_conf_file }}"
+-    section: DEFAULT
+-    key: container_cli
+-    ignore_missing_file: true
+-  register: container_cli
+-
+ - name: Get keystone crontab
+   become: true
+-  shell: |
+-    set -o pipefail
+-    {{ container_cli.value|default('podman', true) }} exec keystone_cron crontab -l -u keystone |grep -v '^#'
++  shell: 'docker exec keystone_cron crontab -l -u keystone |grep -v "^#"'
+   register: cron_result
+   changed_when: False
+-
+ - name: Check keystone crontab
+   fail:
+     msg: >-
+-      keystone token_flush does not appear to be enabled via cron.
+-      You should add '<desired interval> keystone-manage token_flush'
+-      to the keystone users crontab."
+-  when: "cron_result.stdout.find('keystone-manage token_flush') == -1"
++      keystone token_flush does not appear to be enabled via cron. You should
++      add '<desired interval > {{ cron_check }}' to the keystone users
++      crontab.
++  failed_when: "cron_check not in cron_result.stdout"

@@ -1,0 +1,22 @@
+--- ./tv-master/roles/pacemaker-status/tasks/main.yml	2019-06-03 11:14:34.693965998 +0200
++++ ./rocky-pacemaker-status	2019-06-03 11:22:39.109484381 +0200
+@@ -1,18 +1,17 @@
+ ---
+ - name: Check pacemaker service is running
+   become: True
+   command: "/usr/bin/systemctl show pacemaker --property ActiveState"
+   register: check_service
+   changed_when: False
+   ignore_errors: True
+ 
+ - when: "check_service.stdout == 'ActiveState=active'"
+   block:
+     - name: Get pacemaker status
+       become: true
+       command: pcs status xml
+       register: pcs_status
+       changed_when: False
+     - name: Check pacemaker status
+-      pacemaker:
+-        status: "{{ pcs_status.stdout }}"
++      pacemaker: status="{{ pcs_status.stdout }}"

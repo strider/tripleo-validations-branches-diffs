@@ -1,0 +1,24 @@
+--- ./tv-master/roles/rabbitmq-limits/tasks/main.yml	2019-06-03 11:14:34.694966005 +0200
++++ ./stein-rabbitmq-limits	2019-06-03 11:22:39.114484418 +0200
+@@ -1,19 +1,10 @@
+ ---
+-- name: Set container_cli fact from the inventory
+-  set_fact:
+-    container_cli: "{{ hostvars[inventory_hostname].container_cli }}"
+-
+ - name: Get file_descriptors total_limit
+   become: true
+   register: actual_fd_limit
+-  shell: >-
+-    "{{ container_cli|default('podman', true) }}"
+-    exec $("{{ container_cli|default'(podman', true) }}" ps -q --filter "name=rabbitmq" | head -1)
+-    rabbitmqctl eval 'proplists:get_value(max_fds, erlang:system_info(check_io)).'
++  shell: docker exec $(docker ps -q --filter "name=rabbitmq" | head -1) rabbitmqctl eval 'proplists:get_value(max_fds, erlang:system_info(check_io)).'
+   changed_when: false
+-
+ - name: Verify the actual limit exceeds the minimal value
+   fail:
+-    msg: >-
+-      {{ actual_fd_limit.stdout }} must be greater than or equal to {{ min_fd_limit }}
++    msg: "{{ actual_fd_limit.stdout }} must be greater than or equal to {{ min_fd_limit }}"
+   failed_when: "actual_fd_limit.stdout|int < min_fd_limit"

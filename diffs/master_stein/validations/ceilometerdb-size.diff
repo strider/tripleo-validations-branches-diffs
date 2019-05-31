@@ -1,0 +1,38 @@
+--- ./tv-master/roles/ceilometerdb-size/tasks/main.yml	2019-06-03 11:14:34.687965955 +0200
++++ ./stein-ceilometerdb-size	2019-06-03 11:22:38.828482336 +0200
+@@ -1,33 +1,30 @@
+ ---
+ - name: Get the path of tripleo undercloud config file
+   become: true
+-  hiera:
+-    name: "tripleo_undercloud_conf_file"
++  hiera: name="tripleo_undercloud_conf_file"
+ 
+ - name: Check if telemetry services are enabled
+   ini:
+     path: "{{ tripleo_undercloud_conf_file }}"
+     section: DEFAULT
+     key: enable_telemetry
+   register: enable_telemetry
+   become: true
+ 
+ - name: End play if telemetry is not enabled
+   meta: end_play
+   when: not enable_telemetry.value|bool
+ 
+ - name: Get event ttl from panko configuration file
+   become: true
+   ini:
+     path: "{{ panko_config_file }}"
+     section: database
+     key: "{{ event_ttl_check }}"
+     ignore_missing_file: true
+   register: event_check_result
+ 
+ - name: Fail if event_ttl_check is set to -1
+   fail:
+-    msg: >-
+-      '{{ panko_config_file }}[database]/{{ event_ttl_check }}' is
+-      set to -1 or not set
++    msg: "'{{ panko_config_file }}[database]/{{ event_ttl_check }} is set to -1 or not set'"
+   when: event_check_result.value|int|default(-1) < 0

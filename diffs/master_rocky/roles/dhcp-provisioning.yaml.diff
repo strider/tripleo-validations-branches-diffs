@@ -1,0 +1,18 @@
+--- ./tv-master/roles/dhcp-validations/tasks/dhcp-provisioning.yaml	2019-06-03 11:14:34.690965976 +0200
++++ ./rocky-dhcp-provisioning.yaml	2019-06-03 11:22:38.961483304 +0200
+@@ -1,14 +1,14 @@
+ ---
+ - name: Get the path of tripleo undercloud config file
+   hiera: name="tripleo_undercloud_conf_file"
+ 
+ - name: Gather undercloud.conf values
+   ini:
+     path: "{{ tripleo_undercloud_conf_file }}"
+     section: DEFAULT
+     key: local_interface
+     ignore_missing_file: True
+   register: local_interface
+ 
+ - name: Look for DHCP responses
+-  script: files/rogue_dhcp.py {{ local_interface.value|default('eth1', true) }}
++  script: files/rogue_dhcp.py {{ local_interface.value|default('eth1') }}

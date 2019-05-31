@@ -1,0 +1,28 @@
+--- ./tv-master/roles/switch-vlans/tasks/main.yml	2019-06-03 11:14:34.695966013 +0200
++++ ./rocky-switch-vlans	2019-06-03 11:22:39.160484753 +0200
+@@ -1,23 +1,15 @@
+ ---
+ - name: Get Ironic Inspector swift auth_url
+   become: true
+-  ini:
+-    path: "{{ ironic_inspector_conf_file }}"
+-    section: swift
+-    key: auth_url
++  ini: path=/var/lib/config-data/puppet-generated/ironic_inspector/etc/ironic-inspector/inspector.conf section=swift key=auth_url
+   register: auth_url
+-
+ - name: Get Ironic Inspector swift password
+   become: true
+-  ini:
+-    path: "{{ ironic_inspector_conf_file }}"
+-    section: swift
+-    key: password
++  ini: path=/var/lib/config-data/puppet-generated/ironic_inspector/etc/ironic-inspector/inspector.conf section=swift key=password
+   register: password
+-
+ - name: Check that switch vlans are present if used in nic-config files
+   switch_vlans:
+     path: "{{ network_environment_path }}"
+     template_files: "{{ lookup('tht') }}"
+     introspection_data: "{{ lookup('introspection_data',
+                             auth_url=auth_url.value, password=password.value) }}"

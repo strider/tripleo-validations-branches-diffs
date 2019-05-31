@@ -1,0 +1,20 @@
+--- ./tv-master/roles/no-op-firewall-nova-driver/tasks/main.yml	2019-06-03 11:14:34.692965991 +0200
++++ ./rocky-no-op-firewall-nova-driver	2019-06-03 11:22:39.048483938 +0200
+@@ -1,16 +1,12 @@
+ ---
+ - name: Read the `firewall_driver` value
+   become: true
+-  ini:
+-    path: /var/lib/config-data/puppet-generated/nova_libvirt/etc/nova/nova.conf
+-    section: DEFAULT
+-    key: firewall_driver
++  ini: path=/var/lib/config-data/puppet-generated/nova_libvirt/etc/nova/nova.conf section=DEFAULT key=firewall_driver
+   register: nova_firewall_driver
+-
+ - name: Verify `firewall_driver` is set to `NoopFirewallDriver`
+   fail:
+     msg: >
+       The firewall_driver value in /etc/nova/nova.conf is
+       {{ nova_firewall_driver.value or 'unset' }}, but it must be set to:
+       nova.virt.firewall.NoopFirewallDriver
+   failed_when: "nova_firewall_driver.value != 'nova.virt.firewall.NoopFirewallDriver'"

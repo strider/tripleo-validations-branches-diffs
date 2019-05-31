@@ -1,0 +1,24 @@
+--- ./tv-master/roles/ceph/tasks/ceph-health.yaml	2019-06-03 11:14:34.688965962 +0200
++++ ./stein-ceph-health.yaml	2019-06-03 11:22:38.842482438 +0200
+@@ -1,21 +1,19 @@
+ ---
+ - name: Check if ceph_mon is deployed
+   become: true
+   shell: hiera -c /etc/puppet/hiera.yaml enabled_services | egrep -sq ceph_mon
+   ignore_errors: true
+   register: ceph_mon_enabled
+   changed_when: False
+-
+ - name: Get ceph health
+   become: true
+   shell: ceph health | awk '{print $1}'
+   register: ceph_health
+   when:
+     - ceph_mon_enabled is succeeded
+-
+ - name: Check ceph health
+   warn:
+     msg: Ceph is in {{ ceph_health.stdout }} state.
+   when:
+     - ceph_mon_enabled is succeeded
+     - ceph_health.stdout == 'HEALTH_WARN'

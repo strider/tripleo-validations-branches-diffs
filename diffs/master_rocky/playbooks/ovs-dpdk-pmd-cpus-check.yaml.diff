@@ -1,0 +1,17 @@
+--- ./tv-master-ovs-dpdk-pmd-cpus-check.yaml	2019-06-03 11:22:38.584480560 +0200
++++ ./rocky-ovs-dpdk-pmd-cpus-check.yaml	2019-06-03 11:22:38.585480568 +0200
+@@ -1,12 +1,14 @@
+ ---
+ - hosts: ComputeOvsDpdk
+   vars:
+     metadata:
+       name: Validates OVS DPDK PMD cores from all NUMA nodes.
+       description: >
+         OVS DPDK PMD cpus must be provided from all NUMA nodes.
+ 
+         A failed status post-deployment indicates PMD CPU list is not
+         configured correctly.
+       groups:
+         - post-deployment
++  become: true
++

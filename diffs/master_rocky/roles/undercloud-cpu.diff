@@ -1,0 +1,11 @@
+--- ./tv-master/roles/undercloud-cpu/tasks/main.yml	2019-06-03 11:14:34.695966013 +0200
++++ ./rocky-undercloud-cpu	2019-06-03 11:22:39.171484833 +0200
+@@ -1,7 +1,4 @@
+ ---
+ - name: Verify the number of CPU cores
+-  fail:
+-    msg: >-
+-      There are {{ ansible_processor_vcpus }} cores in the system,
+-      but there should be at least {{ min_undercloud_cpu_count }}
++  fail: msg="There are {{ ansible_processor_vcpus }} cores in the system, but there should be at least {{ min_undercloud_cpu_count }}"
+   failed_when: "ansible_processor_vcpus|int < min_undercloud_cpu_count|int"

@@ -1,0 +1,12 @@
+--- ./tv-master/roles/undercloud-ram/tasks/main.yml	2019-06-03 11:14:34.696966020 +0200
++++ ./stein-undercloud-ram	2019-06-03 11:22:39.219485182 +0200
+@@ -1,8 +1,5 @@
+ ---
+ - name: Verify the RAM requirements
+-  fail:
+-    msg: >-
+-      The RAM on the undercloud node is {{ ansible_memtotal_mb }} MB,
+-      the minimal recommended value is {{ min_undercloud_ram_gb|int * 1024 }} MB.
++  fail: msg="The RAM on the undercloud node is {{ ansible_memtotal_mb }} MB, the minimal recommended value is {{ min_undercloud_ram_gb|int * 1024 }} MB."
+   # NOTE(shadower): converting GB to MB
+   failed_when: "(ansible_memtotal_mb) < min_undercloud_ram_gb|int * 1024"

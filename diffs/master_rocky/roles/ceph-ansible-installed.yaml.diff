@@ -1,0 +1,21 @@
+--- ./tv-master/roles/ceph/tasks/ceph-ansible-installed.yaml	2019-06-03 11:14:34.688965962 +0200
++++ ./rocky-ceph-ansible-installed.yaml	2019-06-03 11:22:38.847482474 +0200
+@@ -1,14 +1,13 @@
+ ---
+ - name: Check if ceph-ansible is installed
+-  shell: rpm -q ceph-ansible || true
++  command: yum list installed ceph-ansible
+   args:
+     warn: no
+-  changed_when: False
+-  ignore_errors: True
++  ignore_errors: true
+   register: ceph_ansible_installed
+-
++  changed_when: False
+ - name: Warn about missing ceph-ansible
+   warn:
+     msg: If planning to use Ceph, it is necessary to install the ceph-ansible on the undercloud
+   when:
+-    - ceph_ansible_installed.stdout.find('is not installed') != -1
++    - ceph_ansible_installed is failed

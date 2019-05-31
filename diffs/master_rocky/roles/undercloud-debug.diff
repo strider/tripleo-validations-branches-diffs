@@ -1,0 +1,22 @@
+--- ./tv-master/roles/undercloud-debug/tasks/main.yml	2019-06-03 11:14:34.695966013 +0200
++++ ./rocky-undercloud-debug	2019-06-03 11:22:39.181484906 +0200
+@@ -1,11 +1,12 @@
+ ---
+ - name: Check the services for debug flag
+-  become: True
+-  ini:
+-    path: "{{ item }}"
+-    section: DEFAULT
+-    key: debug
+-    ignore_missing_file: True
++  become: true
++  ini: path={{ item }} section=DEFAULT key=debug ignore_missing_file=True
+   register: config_result
+-  with_items: "{{ services_conf_files }}"
++  with_items:
++    - /var/lib/config-data/puppet-generated/nova/etc/nova/nova.conf
++    - /var/lib/config-data/puppet-generated/neutron/etc/neutron/neutron.conf
++    - /var/lib/config-data/puppet-generated/ceilometer/etc/ceilometer/ceilometer.conf
++    - /var/lib/config-data/puppet-generated/heat/etc/heat/heat.conf
++    - /var/lib/config-data/puppet-generated/ironic/etc/ironic/ironic.conf
+   failed_when: "debug_check|bool  == config_result.value|bool"

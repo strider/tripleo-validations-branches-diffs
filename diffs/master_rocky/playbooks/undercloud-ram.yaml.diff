@@ -1,0 +1,19 @@
+--- ./tv-master-undercloud-ram.yaml	2019-06-03 11:22:38.501479956 +0200
++++ ./rocky-undercloud-ram.yaml	2019-06-03 11:22:38.502479963 +0200
+@@ -1,14 +1,14 @@
+ ---
+ - hosts: undercloud
+   vars:
+     metadata:
+       name: Verify the undercloud fits the RAM requirements
+       description: >
+         Verify that the undercloud has enough RAM.
+ 
+-        https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/14/html/director_installation_and_usage/planning-your-undercloud#determining-environment-scale
++        https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux_OpenStack_Platform/7/html/Director_Installation_and_Usage/sect-Undercloud_Requirements.html
+       groups:
+         - prep
+         - pre-introspection
+         - pre-upgrade
+-    min_undercloud_ram_gb: 24
++    min_undercloud_ram_gb: 16

@@ -1,0 +1,24 @@
+--- ./tv-master/roles/mysql-open-files-limit/tasks/main.yml	2019-06-03 11:14:34.691965984 +0200
++++ ./stein-mysql-open-files-limit	2019-06-03 11:22:38.995483551 +0200
+@@ -1,20 +1,12 @@
+ ---
+-- name: Set container_cli fact from the inventory
+-  set_fact:
+-    container_cli: "{{ hostvars[inventory_hostname].container_cli }}"
+-
+ - name: Get the open_files_limit value
+   become: true
+-  shell: >-
+-    "{{ container_cli|default('podman', true) }}" exec -u root
+-    $("{{ container_cli|default('podman', true) }}" ps -q --filter "name=mysql|galera-bundle" | head -1)
+-    /bin/bash -c 'ulimit -n'
++  shell: docker exec -u root $(docker ps -q --filter "name=mysql|galera-bundle" | head -1) /bin/bash -c 'ulimit -n'
+   changed_when: False
+   register: mysqld_open_files_limit
+-
+ - name: Test the open-files-limit value
+   fail:
+     msg: >
+       The open_files_limit option for mysql must be higher than
+       {{ min_open_files_limit }}. Right now it's {{ mysqld_open_files_limit.stdout }}.
+   failed_when: "mysqld_open_files_limit.stdout|int < min_open_files_limit"
