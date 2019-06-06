@@ -1,5 +1,5 @@
---- ./tv-master/roles/ironic-boot-configuration/tasks/main.yml	2019-06-03 11:14:34.691965984 +0200
-+++ ./stein-ironic-boot-configuration	2019-06-03 11:22:38.985483479 +0200
+--- ./tv-master/roles/ironic-boot-configuration/tasks/main.yml	2019-06-06 13:21:10.699208129 +0200
++++ ./stein-ironic-boot-configuration	2019-06-06 13:21:14.109232005 +0200
 @@ -1,28 +1,21 @@
  ---
  - name: Get id for deploy kernel by name

@@ -1,5 +1,5 @@
---- ./tv-master/roles/controller-ulimits/tasks/main.yml	2019-06-03 11:14:34.689965969 +0200
-+++ ./rocky-controller-ulimits	2019-06-03 11:22:38.911482940 +0200
+--- ./tv-master/roles/controller-ulimits/tasks/main.yml	2019-06-06 13:21:10.697208115 +0200
++++ ./rocky-controller-ulimits	2019-06-06 13:21:14.043231543 +0200
 @@ -1,28 +1,26 @@
  ---
  - name: Get nofiles limit

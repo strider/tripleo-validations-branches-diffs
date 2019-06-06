@@ -1,5 +1,5 @@
---- ./tv-master/roles/check-latest-minor-version/tasks/main.yml	2019-06-03 11:14:34.688965962 +0200
-+++ ./stein-check-latest-minor-version	2019-06-03 11:22:38.857482547 +0200
+--- ./tv-master/roles/check-latest-minor-version/tasks/main.yml	2019-06-06 13:21:10.696208108 +0200
++++ ./stein-check-latest-minor-version	2019-06-06 13:21:13.990231172 +0200
 @@ -1,16 +1,11 @@
  ---
  - name: Get available updates for packages

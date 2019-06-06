@@ -1,5 +1,5 @@
---- ./tv-master/roles/ceph/tasks/ceph-health.yaml	2019-06-03 11:14:34.688965962 +0200
-+++ ./rocky-ceph-health.yaml	2019-06-03 11:22:38.852482511 +0200
+--- ./tv-master/roles/ceph/tasks/ceph-health.yaml	2019-06-06 13:21:10.696208108 +0200
++++ ./rocky-ceph-health.yaml	2019-06-06 13:21:13.986231144 +0200
 @@ -1,21 +1,19 @@
  ---
  - name: Check if ceph_mon is deployed

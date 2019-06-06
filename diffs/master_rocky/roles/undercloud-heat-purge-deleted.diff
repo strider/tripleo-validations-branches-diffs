@@ -1,5 +1,5 @@
---- ./tv-master/roles/undercloud-heat-purge-deleted/tasks/main.yml	2019-06-03 11:14:34.696966020 +0200
-+++ ./rocky-undercloud-heat-purge-deleted	2019-06-03 11:22:39.202485058 +0200
+--- ./tv-master/roles/undercloud-heat-purge-deleted/tasks/main.yml	2019-06-06 13:21:10.703208157 +0200
++++ ./rocky-undercloud-heat-purge-deleted	2019-06-06 13:21:14.322233496 +0200
 @@ -1,29 +1,9 @@
  ---
 -- name: Get the path of tripleo undercloud config file

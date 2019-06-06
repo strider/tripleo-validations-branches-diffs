@@ -1,5 +1,5 @@
---- ./tv-master/roles/openshift-on-openstack/tasks/openshift-hw-requirements.yaml	2019-06-03 11:14:34.693965998 +0200
-+++ ./stein-openshift-hw-requirements.yaml	2019-06-03 11:22:39.075484134 +0200
+--- ./tv-master/roles/openshift-on-openstack/tasks/openshift-hw-requirements.yaml	2019-06-06 13:21:10.701208143 +0200
++++ ./stein-openshift-hw-requirements.yaml	2019-06-06 13:21:14.205232677 +0200
 @@ -1,145 +1,140 @@
  ---
 +

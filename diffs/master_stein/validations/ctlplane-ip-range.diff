@@ -1,5 +1,5 @@
---- ./tv-master/roles/ctlplane-ip-range/tasks/main.yml	2019-06-03 11:14:34.689965969 +0200
-+++ ./stein-ctlplane-ip-range	2019-06-03 11:22:38.916482977 +0200
+--- ./tv-master/roles/ctlplane-ip-range/tasks/main.yml	2019-06-06 13:21:10.697208115 +0200
++++ ./stein-ctlplane-ip-range	2019-06-06 13:21:14.048231578 +0200
 @@ -1,29 +1,28 @@
  ---
  - name: Get the path of tripleo undercloud config file

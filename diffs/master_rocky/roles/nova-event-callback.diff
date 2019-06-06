@@ -1,5 +1,5 @@
---- ./tv-master/roles/nova-event-callback/tasks/main.yml	2019-06-03 11:14:34.692965991 +0200
-+++ ./rocky-nova-event-callback	2019-06-03 11:22:39.059484018 +0200
+--- ./tv-master/roles/nova-event-callback/tasks/main.yml	2019-06-06 13:21:10.700208136 +0200
++++ ./rocky-nova-event-callback	2019-06-06 13:21:14.184232530 +0200
 @@ -1,80 +1,64 @@
  ---
 -- name: Get VIF Plugging setting values from nova.conf

@@ -1,5 +1,5 @@
---- ./tv-master/roles/default-node-count/tasks/main.yml	2019-06-03 11:14:34.689965969 +0200
-+++ ./stein-default-node-count	2019-06-03 11:22:38.926483050 +0200
+--- ./tv-master/roles/default-node-count/tasks/main.yml	2019-06-06 13:21:10.697208115 +0200
++++ ./stein-default-node-count	2019-06-06 13:21:14.057231641 +0200
 @@ -1,39 +1,40 @@
  ---
  - name: Retrieve the hypervisor statistics

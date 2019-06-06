@@ -1,5 +1,5 @@
---- ./tv-master/roles/stonith-exists/tasks/main.yml	2019-06-03 11:14:34.694966005 +0200
-+++ ./stein-stonith-exists	2019-06-03 11:22:39.145484643 +0200
+--- ./tv-master/roles/stonith-exists/tasks/main.yml	2019-06-06 13:21:10.702208150 +0200
++++ ./stein-stonith-exists	2019-06-06 13:21:14.269233126 +0200
 @@ -1,22 +1,21 @@
  ---
  - name: Check if we are in HA cluster environment

@@ -1,5 +1,5 @@
---- ./tv-master/roles/repos/tasks/main.yml	2019-06-03 11:14:34.694966005 +0200
-+++ ./stein-repos	2019-06-03 11:22:39.124484490 +0200
+--- ./tv-master/roles/repos/tasks/main.yml	2019-06-06 13:21:10.702208150 +0200
++++ ./stein-repos	2019-06-06 13:21:14.250232993 +0200
 @@ -1,35 +1,30 @@
  ---
  - name: List repositories

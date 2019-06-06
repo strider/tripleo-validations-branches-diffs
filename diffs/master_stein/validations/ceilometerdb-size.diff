@@ -1,5 +1,5 @@
---- ./tv-master/roles/ceilometerdb-size/tasks/main.yml	2019-06-03 11:14:34.687965955 +0200
-+++ ./stein-ceilometerdb-size	2019-06-03 11:22:38.828482336 +0200
+--- ./tv-master/roles/ceilometerdb-size/tasks/main.yml	2019-06-06 13:21:10.695208101 +0200
++++ ./stein-ceilometerdb-size	2019-06-06 13:21:13.964230990 +0200
 @@ -1,33 +1,30 @@
  ---
  - name: Get the path of tripleo undercloud config file

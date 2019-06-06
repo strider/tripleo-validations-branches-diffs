@@ -1,5 +1,5 @@
---- ./tv-master-ovs-dpdk-pmd-cpus-check.yaml	2019-06-03 11:22:38.584480560 +0200
-+++ ./rocky-ovs-dpdk-pmd-cpus-check.yaml	2019-06-03 11:22:38.585480568 +0200
+--- ./tv-master-ovs-dpdk-pmd-cpus-check.yaml	2019-06-06 13:21:13.722229295 +0200
++++ ./rocky-ovs-dpdk-pmd-cpus-check.yaml	2019-06-06 13:21:13.723229302 +0200
 @@ -1,12 +1,14 @@
  ---
  - hosts: ComputeOvsDpdk

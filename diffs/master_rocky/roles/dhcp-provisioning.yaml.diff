@@ -1,5 +1,5 @@
---- ./tv-master/roles/dhcp-validations/tasks/dhcp-provisioning.yaml	2019-06-03 11:14:34.690965976 +0200
-+++ ./rocky-dhcp-provisioning.yaml	2019-06-03 11:22:38.961483304 +0200
+--- ./tv-master/roles/dhcp-validations/tasks/dhcp-provisioning.yaml	2019-06-06 13:21:10.698208122 +0200
++++ ./rocky-dhcp-provisioning.yaml	2019-06-06 13:21:14.088231858 +0200
 @@ -1,14 +1,14 @@
  ---
  - name: Get the path of tripleo undercloud config file

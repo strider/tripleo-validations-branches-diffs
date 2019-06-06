@@ -1,5 +1,5 @@
---- ./tv-master/roles/stack-health/tasks/main.yml	2019-06-03 11:14:34.694966005 +0200
-+++ ./rocky-stack-health	2019-06-03 11:22:39.140484607 +0200
+--- ./tv-master/roles/stack-health/tasks/main.yml	2019-06-06 13:21:10.702208150 +0200
++++ ./rocky-stack-health	2019-06-06 13:21:14.265233097 +0200
 @@ -1,9 +1,7 @@
  ---
  - name: Check stack resource statuses

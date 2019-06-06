@@ -1,5 +1,5 @@
---- ./tv-master-containerized-undercloud-docker.yaml	2019-06-03 11:22:38.532480182 +0200
-+++ ./rocky-containerized-undercloud-docker.yaml	2019-06-03 11:22:38.533480189 +0200
+--- ./tv-master-containerized-undercloud-docker.yaml	2019-06-06 13:21:13.672228945 +0200
++++ ./rocky-containerized-undercloud-docker.yaml	2019-06-06 13:21:13.673228952 +0200
 @@ -1,101 +1,102 @@
  ---
  - hosts: undercloud

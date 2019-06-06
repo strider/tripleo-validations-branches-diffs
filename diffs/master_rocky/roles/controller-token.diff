@@ -1,5 +1,5 @@
---- ./tv-master/roles/controller-token/tasks/main.yml	2019-06-03 11:14:34.689965969 +0200
-+++ ./rocky-controller-token	2019-06-03 11:22:38.901482867 +0200
+--- ./tv-master/roles/controller-token/tasks/main.yml	2019-06-06 13:21:10.697208115 +0200
++++ ./rocky-controller-token	2019-06-06 13:21:14.033231473 +0200
 @@ -1,13 +1,8 @@
  ---
  - name: Fetch token value

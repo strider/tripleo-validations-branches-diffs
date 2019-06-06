@@ -1,5 +1,5 @@
---- ./tv-master/roles/check-network-gateway/tasks/main.yml	2019-06-03 11:14:34.688965962 +0200
-+++ ./stein-check-network-gateway	2019-06-03 11:22:38.868482627 +0200
+--- ./tv-master/roles/check-network-gateway/tasks/main.yml	2019-06-06 13:21:10.696208108 +0200
++++ ./stein-check-network-gateway	2019-06-06 13:21:14.001231249 +0200
 @@ -1,40 +1,29 @@
  ---
  - name: Get the path of tripleo undercloud config file

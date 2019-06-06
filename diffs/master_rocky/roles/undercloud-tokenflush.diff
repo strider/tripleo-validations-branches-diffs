@@ -1,5 +1,5 @@
---- ./tv-master/roles/undercloud-tokenflush/tasks/main.yml	2019-06-03 11:14:34.697966027 +0200
-+++ ./rocky-undercloud-tokenflush	2019-06-03 11:22:39.271485560 +0200
+--- ./tv-master/roles/undercloud-tokenflush/tasks/main.yml	2019-06-06 13:21:10.704208164 +0200
++++ ./rocky-undercloud-tokenflush	2019-06-06 13:21:14.369233826 +0200
 @@ -1,29 +1,10 @@
  ---
 -- name: Get the path of tripleo undercloud config file

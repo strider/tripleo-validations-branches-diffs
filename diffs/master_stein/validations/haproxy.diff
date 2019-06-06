@@ -1,5 +1,5 @@
---- ./tv-master/roles/haproxy/tasks/main.yml	2019-06-03 11:14:34.690965976 +0200
-+++ ./stein-haproxy	2019-06-03 11:22:38.974483399 +0200
+--- ./tv-master/roles/haproxy/tasks/main.yml	2019-06-06 13:21:10.698208122 +0200
++++ ./stein-haproxy	2019-06-06 13:21:14.099231935 +0200
 @@ -1,51 +1,22 @@
  ---
  - name: Gather the HAProxy config

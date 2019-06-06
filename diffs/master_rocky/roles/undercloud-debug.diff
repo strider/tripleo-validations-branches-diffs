@@ -1,5 +1,5 @@
---- ./tv-master/roles/undercloud-debug/tasks/main.yml	2019-06-03 11:14:34.695966013 +0200
-+++ ./rocky-undercloud-debug	2019-06-03 11:22:39.181484906 +0200
+--- ./tv-master/roles/undercloud-debug/tasks/main.yml	2019-06-06 13:21:10.703208157 +0200
++++ ./rocky-undercloud-debug	2019-06-06 13:21:14.303233363 +0200
 @@ -1,11 +1,12 @@
  ---
  - name: Check the services for debug flag

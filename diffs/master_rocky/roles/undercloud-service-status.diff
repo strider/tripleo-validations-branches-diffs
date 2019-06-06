@@ -1,5 +1,5 @@
---- ./tv-master/roles/undercloud-service-status/tasks/main.yml	2019-06-03 11:14:34.697966027 +0200
-+++ ./rocky-undercloud-service-status	2019-06-03 11:22:39.258485466 +0200
+--- ./tv-master/roles/undercloud-service-status/tasks/main.yml	2019-06-06 13:21:10.704208164 +0200
++++ ./rocky-undercloud-service-status	2019-06-06 13:21:14.360233763 +0200
 @@ -1,18 +1,12 @@
  ---
  - name: Check Services are running

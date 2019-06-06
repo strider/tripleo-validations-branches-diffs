@@ -1,5 +1,5 @@
---- ./tv-master/roles/undercloud-disk-space/tasks/main.yml	2019-06-03 11:14:34.695966013 +0200
-+++ ./tv-stein/validations/tasks/disk_space.yaml	2019-06-03 11:14:35.955975114 +0200
+--- ./tv-master/roles/undercloud-disk-space/tasks/main.yml	2019-06-06 13:21:10.703208157 +0200
++++ ./tv-stein/validations/tasks/disk_space.yaml	2019-06-06 13:21:12.137218198 +0200
 @@ -1,39 +1,36 @@
 ----
  - name: Set a constant defining number of Bytes in 1 GB

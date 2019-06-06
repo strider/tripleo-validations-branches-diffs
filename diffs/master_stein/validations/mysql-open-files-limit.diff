@@ -1,5 +1,5 @@
---- ./tv-master/roles/mysql-open-files-limit/tasks/main.yml	2019-06-03 11:14:34.691965984 +0200
-+++ ./stein-mysql-open-files-limit	2019-06-03 11:22:38.995483551 +0200
+--- ./tv-master/roles/mysql-open-files-limit/tasks/main.yml	2019-06-06 13:21:10.699208129 +0200
++++ ./stein-mysql-open-files-limit	2019-06-06 13:21:14.119232075 +0200
 @@ -1,20 +1,12 @@
  ---
 -- name: Set container_cli fact from the inventory

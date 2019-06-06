@@ -1,5 +1,5 @@
---- ./tv-master/roles/openshift-on-openstack/tasks/openshift-hw-requirements.yaml	2019-06-03 11:14:34.693965998 +0200
-+++ ./rocky-openshift-hw-requirements.yaml	2019-06-03 11:22:39.085484207 +0200
+--- ./tv-master/roles/openshift-on-openstack/tasks/openshift-hw-requirements.yaml	2019-06-06 13:21:10.701208143 +0200
++++ ./rocky-openshift-hw-requirements.yaml	2019-06-06 13:21:14.213232733 +0200
 @@ -1,145 +1,140 @@
  ---
 +

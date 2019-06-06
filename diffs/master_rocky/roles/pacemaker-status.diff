@@ -1,5 +1,5 @@
---- ./tv-master/roles/pacemaker-status/tasks/main.yml	2019-06-03 11:14:34.693965998 +0200
-+++ ./rocky-pacemaker-status	2019-06-03 11:22:39.109484381 +0200
+--- ./tv-master/roles/pacemaker-status/tasks/main.yml	2019-06-06 13:21:10.701208143 +0200
++++ ./rocky-pacemaker-status	2019-06-06 13:21:14.236232894 +0200
 @@ -1,18 +1,17 @@
  ---
  - name: Check pacemaker service is running

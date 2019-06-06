@@ -1,5 +1,5 @@
---- ./tv-master/roles/dhcp-validations/tasks/dhcp-introspection.yaml	2019-06-03 11:14:34.690965976 +0200
-+++ ./stein-dhcp-introspection.yaml	2019-06-03 11:22:38.949483217 +0200
+--- ./tv-master/roles/dhcp-validations/tasks/dhcp-introspection.yaml	2019-06-06 13:21:10.698208122 +0200
++++ ./stein-dhcp-introspection.yaml	2019-06-06 13:21:14.077231781 +0200
 @@ -1,20 +1,12 @@
  ---
  - name: Look up the introspection interface

@@ -1,5 +1,5 @@
---- ./tv-master/roles/xfs-check-ftype/tasks/main.yml	2019-06-03 11:14:34.697966027 +0200
-+++ ./stein-xfs-check-ftype	2019-06-03 11:22:39.277485604 +0200
+--- ./tv-master/roles/xfs-check-ftype/tasks/main.yml	2019-06-06 13:21:10.706208178 +0200
++++ ./stein-xfs-check-ftype	2019-06-06 13:21:14.374233861 +0200
 @@ -1,25 +1,23 @@
 ----
  - name: Check if there are XFS volumes with ftype=0

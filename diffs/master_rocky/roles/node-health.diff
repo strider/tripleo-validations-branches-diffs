@@ -1,5 +1,5 @@
---- ./tv-master/roles/node-health/tasks/main.yml	2019-06-03 11:14:34.692965991 +0200
-+++ ./rocky-node-health	2019-06-03 11:22:39.037483857 +0200
+--- ./tv-master/roles/node-health/tasks/main.yml	2019-06-06 13:21:10.700208136 +0200
++++ ./rocky-node-health	2019-06-06 13:21:14.156232334 +0200
 @@ -1,35 +1,29 @@
  ---
  - name: Collect IPs for overcloud nodes

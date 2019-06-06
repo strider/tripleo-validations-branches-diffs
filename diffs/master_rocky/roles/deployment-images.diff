@@ -1,5 +1,5 @@
---- ./tv-master/roles/deployment-images/tasks/main.yml	2019-06-03 11:14:34.690965976 +0200
-+++ ./rocky-deployment-images	2019-06-03 11:22:38.942483166 +0200
+--- ./tv-master/roles/deployment-images/tasks/main.yml	2019-06-06 13:21:10.698208122 +0200
++++ ./rocky-deployment-images	2019-06-06 13:21:14.072231746 +0200
 @@ -1,22 +1,19 @@
  ---
  - name: Fetch deploy kernel by name

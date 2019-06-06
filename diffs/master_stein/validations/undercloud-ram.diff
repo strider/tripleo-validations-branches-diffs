@@ -1,5 +1,5 @@
---- ./tv-master/roles/undercloud-ram/tasks/main.yml	2019-06-03 11:14:34.696966020 +0200
-+++ ./stein-undercloud-ram	2019-06-03 11:22:39.219485182 +0200
+--- ./tv-master/roles/undercloud-ram/tasks/main.yml	2019-06-06 13:21:10.704208164 +0200
++++ ./stein-undercloud-ram	2019-06-06 13:21:14.336233595 +0200
 @@ -1,8 +1,5 @@
  ---
  - name: Verify the RAM requirements

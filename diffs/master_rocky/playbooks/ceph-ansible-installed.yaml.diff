@@ -1,0 +1,13 @@
+--- ./tv-master-ceph-ansible-installed.yaml	2019-06-06 13:21:13.871230339 +0200
++++ ./rocky-ceph-ansible-installed.yaml	2019-06-06 13:21:13.872230346 +0200
+@@ -1,10 +1,9 @@
+ ---
+ - hosts: undercloud
+   vars:
+     metadata:
+       name: Check if ceph-ansible is installed on the undercloud
+       description: >
+         Prints a message if ceph-ansible isn't installed
+       groups:
+         - pre-deployment
+-    fail_without_ceph_ansible: false

@@ -1,5 +1,5 @@
---- ./tv-master/roles/no-op-firewall-nova-driver/tasks/main.yml	2019-06-03 11:14:34.692965991 +0200
-+++ ./stein-no-op-firewall-nova-driver	2019-06-03 11:22:39.043483901 +0200
+--- ./tv-master/roles/no-op-firewall-nova-driver/tasks/main.yml	2019-06-06 13:21:10.700208136 +0200
++++ ./stein-no-op-firewall-nova-driver	2019-06-06 13:21:14.164232390 +0200
 @@ -1,16 +1,12 @@
  ---
  - name: Read the `firewall_driver` value

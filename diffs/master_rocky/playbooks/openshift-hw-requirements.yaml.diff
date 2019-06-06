@@ -1,5 +1,5 @@
---- ./tv-master-openshift-hw-requirements.yaml	2019-06-03 11:22:38.494479905 +0200
-+++ ./rocky-openshift-hw-requirements.yaml	2019-06-03 11:22:38.495479912 +0200
+--- ./tv-master-openshift-hw-requirements.yaml	2019-06-06 13:21:13.638228707 +0200
++++ ./rocky-openshift-hw-requirements.yaml	2019-06-06 13:21:13.639228714 +0200
 @@ -1,32 +1,33 @@
  ---
  - hosts: undercloud

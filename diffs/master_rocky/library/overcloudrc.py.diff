@@ -1,5 +1,5 @@
---- ./tv-master/library/overcloudrc.py	2019-06-03 11:14:34.682965919 +0200
-+++ ./tv-rocky/validations/library/overcloudrc.py	2019-06-03 11:14:37.503986295 +0200
+--- ./tv-master/library/overcloudrc.py	2019-06-06 13:21:10.691208073 +0200
++++ ./tv-rocky/validations/library/overcloudrc.py	2019-06-06 13:21:13.554228119 +0200
 @@ -1,78 +1,76 @@
  #!/usr/bin/env python
  

@@ -1,5 +1,5 @@
---- ./tv-master/roles/neutron-sanity-check/tasks/main.yml	2019-06-03 11:14:34.691965984 +0200
-+++ ./stein-neutron-sanity-check	2019-06-03 11:22:39.015483697 +0200
+--- ./tv-master/roles/neutron-sanity-check/tasks/main.yml	2019-06-06 13:21:10.699208129 +0200
++++ ./stein-neutron-sanity-check	2019-06-06 13:21:14.137232201 +0200
 @@ -1,53 +1,37 @@
  ---
 -- name: Get the path of tripleo undercloud config file

@@ -1,5 +1,5 @@
---- ./tv-master/roles/openstack-endpoints/tasks/main.yml	2019-06-03 11:14:34.693965998 +0200
-+++ ./rocky-openstack-endpoints	2019-06-03 11:22:39.098484301 +0200
+--- ./tv-master/roles/openstack-endpoints/tasks/main.yml	2019-06-06 13:21:10.701208143 +0200
++++ ./rocky-openstack-endpoints	2019-06-06 13:21:14.226232824 +0200
 @@ -1,54 +1,48 @@
  ---
  - name: Set fact to identify if the overcloud was deployed

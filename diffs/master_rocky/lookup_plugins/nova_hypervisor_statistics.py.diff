@@ -1,5 +1,5 @@
---- ./tv-master/lookup_plugins/nova_hypervisor_statistics.py	2019-06-03 11:14:34.683965926 +0200
-+++ ./tv-rocky/validations/lookup_plugins/nova_hypervisor_statistics.py	2019-06-03 11:14:37.503986295 +0200
+--- ./tv-master/lookup_plugins/nova_hypervisor_statistics.py	2019-06-06 13:21:10.691208073 +0200
++++ ./tv-rocky/validations/lookup_plugins/nova_hypervisor_statistics.py	2019-06-06 13:21:13.554228119 +0200
 @@ -1,50 +1,52 @@
  #!/usr/bin/env python
  

@@ -1,5 +1,5 @@
---- ./tv-master/roles/openshift-on-openstack/tasks/openshift-nw-requirements.yaml	2019-06-03 11:14:34.693965998 +0200
-+++ ./rocky-openshift-nw-requirements.yaml	2019-06-03 11:22:39.089484236 +0200
+--- ./tv-master/roles/openshift-on-openstack/tasks/openshift-nw-requirements.yaml	2019-06-06 13:21:10.701208143 +0200
++++ ./rocky-openshift-nw-requirements.yaml	2019-06-06 13:21:14.217232761 +0200
 @@ -1,72 +1,71 @@
  ---
  - name: Set fact to identify if the overcloud was deployed

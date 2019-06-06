@@ -1,5 +1,5 @@
---- ./tv-master/roles/check-latest-minor-version/tasks/main.yml	2019-06-03 11:14:34.688965962 +0200
-+++ ./rocky-check-latest-minor-version	2019-06-03 11:22:38.863482591 +0200
+--- ./tv-master/roles/check-latest-minor-version/tasks/main.yml	2019-06-06 13:21:10.696208108 +0200
++++ ./rocky-check-latest-minor-version	2019-06-06 13:21:13.996231214 +0200
 @@ -1,16 +1,11 @@
  ---
  - name: Get available updates for packages

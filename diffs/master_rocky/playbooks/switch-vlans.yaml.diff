@@ -1,5 +1,5 @@
---- ./tv-master-switch-vlans.yaml	2019-06-03 11:22:38.641480975 +0200
-+++ ./rocky-switch-vlans.yaml	2019-06-03 11:22:38.642480982 +0200
+--- ./tv-master-switch-vlans.yaml	2019-06-06 13:21:13.778229687 +0200
++++ ./rocky-switch-vlans.yaml	2019-06-06 13:21:13.779229694 +0200
 @@ -1,16 +1,15 @@
  ---
  - hosts: undercloud

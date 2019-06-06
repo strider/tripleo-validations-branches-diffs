@@ -1,5 +1,5 @@
---- ./tv-master/library/check_flavors.py	2019-06-03 11:14:34.681965912 +0200
-+++ ./tv-rocky/validations/library/check_flavors.py	2019-06-03 11:14:37.503986295 +0200
+--- ./tv-master/library/check_flavors.py	2019-06-06 13:21:10.690208066 +0200
++++ ./tv-rocky/validations/library/check_flavors.py	2019-06-06 13:21:13.553228112 +0200
 @@ -1,181 +1,181 @@
  #!/usr/bin/env python
  # Copyright 2018 Red Hat, Inc.
